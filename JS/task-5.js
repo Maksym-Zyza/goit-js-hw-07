@@ -8,25 +8,20 @@ console.log("Task5:");
 
 const inputRef = document.querySelector("#name-input");
 console.log(inputRef);
-const SpanRef = document.querySelector("#name-output");
-console.log(SpanRef);
+const spanRef = document.querySelector("#name-output");
+console.log(spanRef);
 
-inputRef.addEventListener("keydown", (e) => {
-  if (e.code === "Enter") {
-    // console.log(e.target.value);
-    SpanRef.textContent = e.target.value;
-    console.log(SpanRef);
-    e.target.value = "";
-    if (SpanRef.textContent === "") {
-      SpanRef.textContent = "незнакомец";
-    }
+const textInpute = (e) => {
+  spanRef.textContent = e.target.value;
+  if (spanRef.textContent === "" || e.target.value === " ") {
+    spanRef.textContent = "незнакомец";
   }
-});
+};
 
-// inputRef.addEventListener("keypress", () => {
-//   console.log("keypress");
-// });
+const dellTextInpute = (e) => {
+  e.target.value = "";
+  spanRef.textContent = "незнакомец";
+};
 
-// inputRef.addEventListener("keyup", () => {
-//   console.log("keyup");
-// });
+inputRef.addEventListener("input", textInpute);
+inputRef.addEventListener("click", dellTextInpute);

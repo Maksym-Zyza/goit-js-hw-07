@@ -15,23 +15,18 @@ console.log("Task4:");
 
 let counterValue = 0;
 const valueRef = document.querySelector("#value");
-// console.log(valueRef);
+const battonDecRef = document.querySelector("button");
+const battonIncRef = document.querySelector("[data-action='increment']");
 
 const increment = () => {
   counterValue += 1;
   valueRef.textContent = counterValue;
-  //   console.log(valueRef.textContent);
 };
 const decrement = () => {
   counterValue -= 1;
   valueRef.textContent = counterValue;
-  //   console.log(valueRef.textContent);
 };
 
-const battonDecRef = document.querySelector("button");
-// console.log(battonDecRef);
 battonDecRef.addEventListener("click", decrement);
 
-const battonIncRef = document.querySelector("[data-action='increment']");
-// console.log(battonIncRef);
 battonIncRef.addEventListener("click", increment);

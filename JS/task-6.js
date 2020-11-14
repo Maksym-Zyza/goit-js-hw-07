@@ -29,14 +29,20 @@ const inputRef = document.querySelector("#validation-input");
 console.log(inputRef);
 const dataRef = inputRef.getAttribute("data-length");
 
-inputRef.addEventListener("change", (e) => {
+const addClass = (e) => {
   inputRef.classList = "";
   if (e.target.value.length === Number(dataRef)) {
     inputRef.classList.add("valid");
-    // console.log(inputRef);
   } else {
-    console.log(e.target.value);
     inputRef.classList.add("invalid");
-    // console.log(inputRef);
   }
-});
+};
+
+const dellTextInpute = (e) => {
+  e.target.value = "";
+  inputRef.classList.remove("valid");
+  inputRef.classList.remove("invalid");
+};
+
+inputRef.addEventListener("change", addClass);
+inputRef.addEventListener("click", dellTextInpute);
