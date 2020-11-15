@@ -74,41 +74,41 @@ const product = {
 </div>; */
 }
 // ======= Создаем елемент в пам'яти для добавление в DOM
-const conteinerRef = document.createElement("div");
-conteinerRef.classList.add("product-card");
-// console.log(conteinerRef);
+// const conteinerRef = document.createElement("div");
+// conteinerRef.classList.add("product-card");
+// // console.log(conteinerRef);
 
-const titleRef = document.createElement("h2");
-titleRef.textContent = product.name;
-titleRef.classList.add("card-title");
-// console.log(titleRef);
+// const titleRef = document.createElement("h2");
+// titleRef.textContent = product.name;
+// titleRef.classList.add("card-title");
+// // console.log(titleRef);
 
-const textRef = document.createElement("p");
-textRef.textContent = product.description;
-textRef.classList.add("card-text");
-// console.log(textRef);
+// const textRef = document.createElement("p");
+// textRef.textContent = product.description;
+// textRef.classList.add("card-text");
+// // console.log(textRef);
 
-const priceRef = document.createElement("p");
-priceRef.textContent = product.price;
-priceRef.classList.add("card-prise");
-// console.log(priceRef);
+// const priceRef = document.createElement("p");
+// priceRef.textContent = product.price;
+// priceRef.classList.add("card-prise");
+// // console.log(priceRef);
 
-const availableRef = document.createElement("span");
-availableRef.textContent = product.available;
-availableRef.classList.add("card-available");
-// console.log(availableRef);
+// const availableRef = document.createElement("span");
+// availableRef.textContent = product.available;
+// availableRef.classList.add("card-available");
+// // console.log(availableRef);
 
-// ======  Сбираем DOM-дерево (гроздь елементов)
-// conteinerRef.appendChild(availableRef);
-// conteinerRef.appendChild(titleRef);
-// conteinerRef.appendChild(textRef);
-// conteinerRef.appendChild(priceRef);
-conteinerRef.append(availableRef, titleRef, textRef, priceRef);
+// // ======  Сбираем DOM-дерево (гроздь елементов)
+// // conteinerRef.appendChild(availableRef);
+// // conteinerRef.appendChild(titleRef);
+// // conteinerRef.appendChild(textRef);
+// // conteinerRef.appendChild(priceRef);
+// conteinerRef.append(availableRef, titleRef, textRef, priceRef);
 
-// ======  Добавляем в ДОМ - нужно добавить в существующий тег:
-//  Добавляем в <div id="root"></div>
-const cardRootRef = document.querySelector("#root");
-cardRootRef.appendChild(conteinerRef);
-console.log(cardRootRef);
+// // ======  Добавляем в ДОМ - нужно добавить в существующий тег:
+// //  Добавляем в <div id="root"></div>
+// const cardRootRef = document.querySelector("#root");
+// cardRootRef.appendChild(conteinerRef);
+// console.log(cardRootRef);
 
 // ====== СОЗДАНИЕ ДИНАМИЧЕСКОГИХ ЕЛЕМЕНТОВ ФУНКЦИЯМИ - JS/create-card.js
